@@ -11,7 +11,9 @@
 ### 核心贡献
 - 召回阶段使用 ERNIE-1.0 将 title + 关键字编码为 256 维向量，采用In-batch Negative 对比学习、通过 ANN 构建索引，实现快速 Top-50 召回（Recall@20 = 0.813）  
 - 排序阶段切换到 ERNIE-3.0，采用 Pairwise Matching，通过 Margin Ranking Loss 进行精细重排序  
-- 完成数据处理、模型微调、ANN 索引构建及评估全流程
+- 完成数据处理、模型微调、ANN 索引构建
 
 ### 训练结果
 - Recall@20 = 0.813（工业级优秀水平）  
+- AUC=0.773
+- 单查询响应时间0.009秒
